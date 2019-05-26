@@ -8,13 +8,13 @@ public class Fisica extends Pessoa {
 	private String rg;
 	
 	
-	public Fisica(String nome, String cpf, String rg) {
+	public Fisica(Nome nome, Cpf cpf, Rg rg) {
 		super(nome);
 		this.cpf = cpf;
 		this.rg = rg;
 	}
 	
-	public Fisica(UUID id, String nome, String cpf, String rg) {
+	public Fisica(Id id, Nome nome, Cpf cpf, Rg rg) {
 		super(id, nome);
 		this.cpf = cpf;
 		this.rg = rg;
@@ -22,9 +22,9 @@ public class Fisica extends Pessoa {
 	
 	
 	public String getCpf() {
-		return cpf;
+		return cpf.imprimeCpf();
 	}
 	public String getRg() {
-		return rg;
+		return rg.imprimeRg();
 	}
 }
